@@ -5,6 +5,8 @@ import statistics
 import gc
 from tensorflow.python.framework.ops import EagerTensor
 from models import bmv_loss, create_contrastive_model
+
+
 class batch_generator:
     def __init__(self, batch_size_):
         self.samples = []

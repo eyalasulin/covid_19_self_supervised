@@ -37,6 +37,7 @@ optimizer = BayesianOptimization(
 logger = JSONLogger(path="./logs_opt1.json")
 optimizer.subscribe(Events.OPTIMIZATION_STEP, logger)
 
+
 optimizer.maximize(
     init_points=10,
     n_iter=200,
