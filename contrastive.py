@@ -4,10 +4,7 @@ import os
 import statistics
 import gc
 from tensorflow.python.framework.ops import EagerTensor
-
 from models import bmv_loss, create_contrastive_model
-
-
 class batch_generator:
     def __init__(self, batch_size_):
         self.samples = []
@@ -106,7 +103,3 @@ def train_contrastive_layer(dev_mode=False,
 
     self_trans_model.save(model_name)
     return self_trans_model
-
-
-def test_save_load_contrastive():
-    pass

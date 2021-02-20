@@ -17,7 +17,6 @@ def covid_with_neptune(params_):
     if history is not None:
         neptune.log_metric('loss', loss)
         neptune.log_metric('accuracy', accuracy)
-        neptune.log_metric('auc', auc)
         for key in history.history.keys():
             for item in history.history[key]:
                 neptune.log_metric(f'h_{key}', item)
@@ -39,7 +38,5 @@ PARAMS['contrastive_model_path'] = f"/home/eyal/privet_dev/cov3_sagi/contrastive
 
 if __name__ == '__main__':
     params = AttrDict(PARAMS)
-
     covid_with_neptune(params)
 
-    # covid_with_neptune(params)

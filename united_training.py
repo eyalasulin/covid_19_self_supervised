@@ -34,7 +34,6 @@ def main(params):
 
         train_dataset = train_dataset.prefetch(buffer_size=AUTOTUNE)
         validation_dataset = validation_dataset.prefetch(buffer_size=AUTOTUNE)
-        # test_dataset = test_dataset.prefetch(buffer_size=AUTOTUNE)
 
         # create the base model
         if params.action == Actions.TrainWithContrastive.value:
