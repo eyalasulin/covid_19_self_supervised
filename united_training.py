@@ -12,7 +12,7 @@ tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
 IMG_SIZE = (160, 160)
 IMG_SHAPE = IMG_SIZE + (3,)
-DB_UNITED_DIR = '/home/eyal/privet_dev/cov3_sagi/Images-processed/'
+DB_UNITED_DIR = './Images-processed/'
 CONTRASTIVE_BATCH_SIZE = 16
 
 
@@ -75,7 +75,7 @@ if __name__ == '__main__':
     unite_epochs = 5
     contrastive_epochs = 1
     action = Actions.TrainWithContrastive.value
-    contrastive_path = f'/home/eyal/privet_dev/cov3_sagi/contrastive_models/contrastive_{contrastive_epochs}.h5'
+    contrastive_path = f'./contrastive_models/contrastive_{contrastive_epochs}.h5'
     freeze_base_model = False
     contrastive_learning_rate = 1e-8
 
